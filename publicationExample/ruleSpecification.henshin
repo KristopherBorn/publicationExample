@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_nAqFkIcfEearFcW47UN1vg">
+  <imports href="publicationExample.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_q4i9IIcfEearFcW47UN1vg" name="researcherWithJournalOrPaper">
+    <lhs xmi:id="_q4nOkIcfEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_2qtjoIcfEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_57Mc8IcfEearFcW47UN1vg">
+        <conclusion xmi:id="_57Mc8YcfEearFcW47UN1vg">
+          <nodes xmi:id="_57Mc8ocfEearFcW47UN1vg" outgoing="_9o8hEIcfEearFcW47UN1vg _95eQYIcfEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher"/>
+          </nodes>
+          <nodes xmi:id="_4MpQcIcfEearFcW47UN1vg" name="reqJournal" incoming="_9o8hEIcfEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//JournalArticle"/>
+          </nodes>
+          <nodes xmi:id="_4ueLIIcfEearFcW47UN1vg" name="reqPaper" incoming="_95eQYIcfEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Paper"/>
+          </nodes>
+          <edges xmi:id="_9o8hEIcfEearFcW47UN1vg" source="_57Mc8ocfEearFcW47UN1vg" target="_4MpQcIcfEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+          </edges>
+          <edges xmi:id="_95eQYIcfEearFcW47UN1vg" source="_57Mc8ocfEearFcW47UN1vg" target="_4ueLIIcfEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_57Mc84cfEearFcW47UN1vg" origin="_2qtjoIcfEearFcW47UN1vg" image="_57Mc8ocfEearFcW47UN1vg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_q4nOkYcfEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_2qtjoYcfEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_2qtjoocfEearFcW47UN1vg" origin="_2qtjoIcfEearFcW47UN1vg" image="_2qtjoYcfEearFcW47UN1vg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Grh74IcgEearFcW47UN1vg" name="researcherWithJournalAndPaper">
+    <lhs xmi:id="_Grh74YcgEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_Grh74ocgEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_Grh744cgEearFcW47UN1vg">
+        <conclusion xmi:id="_Grh75IcgEearFcW47UN1vg">
+          <nodes xmi:id="_Grh75YcgEearFcW47UN1vg" outgoing="_Grh76IcgEearFcW47UN1vg _Grh76YcgEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher"/>
+          </nodes>
+          <nodes xmi:id="_Grh75ocgEearFcW47UN1vg" name="reqJorunal" incoming="_Grh76IcgEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//JournalArticle"/>
+          </nodes>
+          <nodes xmi:id="_Grh754cgEearFcW47UN1vg" name="reqPaper" incoming="_Grh76YcgEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Paper"/>
+          </nodes>
+          <edges xmi:id="_Grh76IcgEearFcW47UN1vg" source="_Grh75YcgEearFcW47UN1vg" target="_Grh75ocgEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+          </edges>
+          <edges xmi:id="_Grh76YcgEearFcW47UN1vg" source="_Grh75YcgEearFcW47UN1vg" target="_Grh754cgEearFcW47UN1vg">
+            <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_Grh76ocgEearFcW47UN1vg" origin="_Grh74ocgEearFcW47UN1vg" image="_Grh75YcgEearFcW47UN1vg"/>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_Grh764cgEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_Grh77IcgEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Grh77YcgEearFcW47UN1vg" origin="_Grh74ocgEearFcW47UN1vg" image="_Grh77IcgEearFcW47UN1vg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_dDrpoIcgEearFcW47UN1vg" name="researcherWithNoJournalAndNoPaper">
+    <lhs xmi:id="_dDrpoYcgEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_dDrpoocgEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_n-HW4YcgEearFcW47UN1vg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_n-HW4ocgEearFcW47UN1vg">
+          <conclusion xmi:id="_n-HW44cgEearFcW47UN1vg">
+            <nodes xmi:id="_n-H98IcgEearFcW47UN1vg" outgoing="_dDrpqIcgEearFcW47UN1vg _dDrpqYcgEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher"/>
+            </nodes>
+            <nodes xmi:id="_dDrppocgEearFcW47UN1vg" name="forbJournal" incoming="_dDrpqIcgEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//JournalArticle"/>
+            </nodes>
+            <nodes xmi:id="_dDrpp4cgEearFcW47UN1vg" name="forbPaper" incoming="_dDrpqYcgEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Paper"/>
+            </nodes>
+            <edges xmi:id="_dDrpqIcgEearFcW47UN1vg" source="_n-H98IcgEearFcW47UN1vg" target="_dDrppocgEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+            </edges>
+            <edges xmi:id="_dDrpqYcgEearFcW47UN1vg" source="_n-H98IcgEearFcW47UN1vg" target="_dDrpp4cgEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_n-H98YcgEearFcW47UN1vg" origin="_dDrpoocgEearFcW47UN1vg" image="_n-H98IcgEearFcW47UN1vg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_dDrpq4cgEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_dDrprIcgEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_dDrprYcgEearFcW47UN1vg" origin="_dDrpoocgEearFcW47UN1vg" image="_dDrprIcgEearFcW47UN1vg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CGLm8IdYEearFcW47UN1vg" name="researcherWithNoJournalAndPaper1" description="">
+    <lhs xmi:id="_CGLm8YdYEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_CGLm8odYEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:And" xmi:id="_FAJoQIdZEearFcW47UN1vg">
+        <left xsi:type="henshin:Not" xmi:id="_gaItoYdYEearFcW47UN1vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_gaItoodYEearFcW47UN1vg">
+            <conclusion xmi:id="_gaIto4dYEearFcW47UN1vg" name="forbJournal">
+              <nodes xmi:id="_gaItpIdYEearFcW47UN1vg" outgoing="_CGLm-YdYEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher"/>
+              </nodes>
+              <nodes xmi:id="_CGLm94dYEearFcW47UN1vg" incoming="_CGLm-YdYEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//JournalArticle"/>
+              </nodes>
+              <edges xmi:id="_CGLm-YdYEearFcW47UN1vg" source="_gaItpIdYEearFcW47UN1vg" target="_CGLm94dYEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_gaItpYdYEearFcW47UN1vg" origin="_CGLm8odYEearFcW47UN1vg" image="_gaItpIdYEearFcW47UN1vg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:NestedCondition" xmi:id="_FAJoQYdZEearFcW47UN1vg">
+          <conclusion xmi:id="_FAJoQodZEearFcW47UN1vg" name="freqPaper">
+            <nodes xmi:id="_FAJoQ4dZEearFcW47UN1vg" outgoing="_CGLm-odYEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher"/>
+            </nodes>
+            <nodes xmi:id="_CGLm-IdYEearFcW47UN1vg" incoming="_CGLm-odYEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Paper"/>
+            </nodes>
+            <edges xmi:id="_CGLm-odYEearFcW47UN1vg" source="_FAJoQ4dZEearFcW47UN1vg" target="_CGLm-IdYEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_FAJoRIdZEearFcW47UN1vg" origin="_CGLm8odYEearFcW47UN1vg" image="_FAJoQ4dZEearFcW47UN1vg"/>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_CGLm_IdYEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_CGLm_YdYEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CGLm_odYEearFcW47UN1vg" origin="_CGLm8odYEearFcW47UN1vg" image="_CGLm_YdYEearFcW47UN1vg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Jpn4UIdaEearFcW47UN1vg" name="researcherWithNoJournalAndPaper2" description="">
+    <lhs xmi:id="_Jpn4UYdaEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_Jpn4UodaEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:And" xmi:id="_DQYMYIdcEearFcW47UN1vg">
+        <left xsi:type="henshin:Not" xmi:id="_CfaCcYdcEearFcW47UN1vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_CfaCcodcEearFcW47UN1vg">
+            <conclusion xmi:id="_CfaCc4dcEearFcW47UN1vg">
+              <nodes xmi:id="_CfaCdIdcEearFcW47UN1vg" outgoing="_Jpn4WYdaEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher"/>
+              </nodes>
+              <nodes xmi:id="_Jpn4WIdaEearFcW47UN1vg" incoming="_Jpn4WYdaEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//JournalArticle"/>
+              </nodes>
+              <edges xmi:id="_Jpn4WYdaEearFcW47UN1vg" source="_CfaCdIdcEearFcW47UN1vg" target="_Jpn4WIdaEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_CfaCdYdcEearFcW47UN1vg" origin="_Jpn4UodaEearFcW47UN1vg" image="_CfaCdIdcEearFcW47UN1vg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:NestedCondition" xmi:id="_DQYMYYdcEearFcW47UN1vg">
+          <conclusion xmi:id="_DQYMYodcEearFcW47UN1vg">
+            <nodes xmi:id="_DQYMY4dcEearFcW47UN1vg" outgoing="_Jpn4X4daEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher"/>
+            </nodes>
+            <nodes xmi:id="_Jpn4XodaEearFcW47UN1vg" incoming="_Jpn4X4daEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Paper"/>
+            </nodes>
+            <edges xmi:id="_Jpn4X4daEearFcW47UN1vg" source="_DQYMY4dcEearFcW47UN1vg" target="_Jpn4XodaEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_DQYMZIdcEearFcW47UN1vg" origin="_Jpn4UodaEearFcW47UN1vg" image="_DQYMY4dcEearFcW47UN1vg"/>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_Jpn4YYdaEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_Jpn4YodaEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Jpn4Y4daEearFcW47UN1vg" origin="_Jpn4UodaEearFcW47UN1vg" image="_Jpn4YodaEearFcW47UN1vg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_W0NDQIdaEearFcW47UN1vg" name="researcherWithNoJournalAndPaper3" description="">
+    <lhs xmi:id="_W0NqUIdaEearFcW47UN1vg" name="Lhs">
+      <nodes xmi:id="_W0NqUYdaEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+      <formula xsi:type="henshin:And" xmi:id="_HLNfsIdbEearFcW47UN1vg">
+        <left xsi:type="henshin:Not" xmi:id="_DXrjsYdbEearFcW47UN1vg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_DXrjsodbEearFcW47UN1vg">
+            <conclusion xmi:id="_DXrjs4dbEearFcW47UN1vg">
+              <nodes xmi:id="_DXrjtIdbEearFcW47UN1vg" outgoing="_W0NqWIdaEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher"/>
+              </nodes>
+              <nodes xmi:id="_W0NqV4daEearFcW47UN1vg" name="forbiddenJournalArt" incoming="_W0NqWIdaEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//JournalArticle"/>
+              </nodes>
+              <edges xmi:id="_W0NqWIdaEearFcW47UN1vg" source="_DXrjtIdbEearFcW47UN1vg" target="_W0NqV4daEearFcW47UN1vg">
+                <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_DXsKwIdbEearFcW47UN1vg" origin="_W0NqUYdaEearFcW47UN1vg" image="_DXrjtIdbEearFcW47UN1vg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:NestedCondition" xmi:id="_HLNfsYdbEearFcW47UN1vg">
+          <conclusion xmi:id="_HLNfsodbEearFcW47UN1vg">
+            <nodes xmi:id="_HLNfs4dbEearFcW47UN1vg" outgoing="_W0NqXodaEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher"/>
+            </nodes>
+            <nodes xmi:id="_W0NqXYdaEearFcW47UN1vg" name="requiredPaper" incoming="_W0NqXodaEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Paper"/>
+            </nodes>
+            <edges xmi:id="_W0NqXodaEearFcW47UN1vg" source="_HLNfs4dbEearFcW47UN1vg" target="_W0NqXYdaEearFcW47UN1vg">
+              <type href="publicationExample.ecore#//Researcher/contributedTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_HLNftIdbEearFcW47UN1vg" origin="_W0NqUYdaEearFcW47UN1vg" image="_HLNfs4dbEearFcW47UN1vg"/>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_W0NqYIdaEearFcW47UN1vg" name="Rhs">
+      <nodes xmi:id="_W0NqYYdaEearFcW47UN1vg">
+        <type href="publicationExample.ecore#//Researcher"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_W0NqYodaEearFcW47UN1vg" origin="_W0NqUYdaEearFcW47UN1vg" image="_W0NqYYdaEearFcW47UN1vg"/>
+  </units>
+</henshin:Module>
